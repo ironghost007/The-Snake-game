@@ -227,7 +227,8 @@ def main():                   # controls both game and in-game actions
                 if key == "LEFT" and dir_x == rate:
                     x_change = rate
 
-
+                '''
+                
                 if X >= SCREEN_WIDTH - 60 or Y >= SCREEN_HEIGHT - 100 or X <= 40 or Y <= 80:
                     in_game = False
 
@@ -243,7 +244,7 @@ def main():                   # controls both game and in-game actions
 
                 if Y <= 80:
                     Y = SCREEN_HEIGHT - 106
-                '''
+                
 
                 X += x_change
                 Y += y_change
