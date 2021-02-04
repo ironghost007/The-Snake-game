@@ -114,7 +114,7 @@ def main():                   # controls both game and in-game actions
 
     food_draw = 1
 
-    snake_roll_over = False
+    snake_roll_over = False         # change this for snake roll over effect
 
     while game_loop:            # the start of the game loop
 
