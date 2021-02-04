@@ -114,6 +114,8 @@ def main():                   # controls both game and in-game actions
 
     food_draw = 1
 
+    snake_roll_over = False
+
     while game_loop:            # the start of the game loop
 
         X = round(SCREEN_WIDTH / 2)
@@ -227,25 +229,26 @@ def main():                   # controls both game and in-game actions
                 if key == "LEFT" and dir_x == rate:
                     x_change = rate
 
-                '''
-                
-                if X >= SCREEN_WIDTH - 60 or Y >= SCREEN_HEIGHT - 100 or X <= 40 or Y <= 80:
-                    in_game = False
-
-                '''
-                if X >= SCREEN_WIDTH - 55:                      # if cond. here ensures that snake
-                    X = 36                                      # exiting in one direction enters
-                                                                # from the opposite direction
-                if Y >= SCREEN_HEIGHT - 105:
-                    Y = 81
-
-                if X <= 35:
-                    X = SCREEN_WIDTH - 45
-
-                if Y <= 80:
-                    Y = SCREEN_HEIGHT - 106
                 
 
+                if snake_roll_over:
+                    if X >= SCREEN_WIDTH - 55:                      # if cond. here ensures that snake
+                        X = 36                                      # exiting in one direction enters
+                                                                    # from the opposite direction
+                    if Y >= SCREEN_HEIGHT - 105:
+                        Y = 81
+
+                    if X <= 35:
+                        X = SCREEN_WIDTH - 45
+
+                    if Y <= 80:
+                        Y = SCREEN_HEIGHT - 106
+                
+                else:
+                    if X >= SCREEN_WIDTH - 60 or Y >= SCREEN_HEIGHT - 100 or X <= 40 or Y <= 80:
+                        in_game = False
+                
+                
                 X += x_change
                 Y += y_change
 
