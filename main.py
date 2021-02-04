@@ -105,7 +105,7 @@ def display_prompt(prompt):
     screen.blit(show_title, [SCREEN_WIDTH - 250, 5])
 
 
-def main():                   # controls both game and in-game actions
+def main():                          # controls both game and in-game actions
     game_loop = True
 
     in_game = True
@@ -114,9 +114,9 @@ def main():                   # controls both game and in-game actions
 
     food_draw = 1
 
-    snake_roll_over = False         # change this for snake roll over effect
+    snake_roll_over = False           # change this for snake roll over effect
 
-    while game_loop:            # the start of the game loop
+    while game_loop:                  # the start of the game loop
 
         X = round(SCREEN_WIDTH / 2)
         Y = round(SCREEN_HEIGHT / 2)
